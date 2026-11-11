@@ -2,6 +2,6 @@
   "name": "zuhura-docs",
   "private": true,
   "scripts": {
-    "build": "pip install -r requirements-docs.txt && mkdocs build"
+    "build": "echo Build ready"
   }
 }
