@@ -1,0 +1,25 @@
+site_name: Zuhura Mars Digital Twin Documentation
+site_description: Scientific intelligence platform and 3D digital representation of Mars
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep orange
+    accent: orange
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Overview: index.md
+  - Architecture:
+      - System Overview: architecture/system-overview.md
+  - Planetary Geodesy:
+      - Mars Coordinate Systems: geodesy/mars-coordinate-systems.md
+  - Scientific Data:
+      - Data Catalog Guide: data/data-catalog-guide.md
+  - AI & Intelligence:
+      - AI Methodology & Grounding: ai/ai-methodology.md
+  - Developer Guide:
+      - Quickstart & Environment: developer/quickstart.md
