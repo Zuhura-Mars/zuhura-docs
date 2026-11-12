@@ -17,6 +17,8 @@ nav:
       - System Overview: architecture/system-overview.md
   - Planetary Geodesy:
       - Mars Coordinate Systems: geodesy/mars-coordinate-systems.md
+  - Advanced Capabilities:
+      - Exploration & Intelligence Features: features/advanced-features.md
   - Scientific Data:
       - Data Catalog Guide: data/data-catalog-guide.md
   - AI & Intelligence:
