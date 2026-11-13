@@ -25,3 +25,10 @@ nav:
       - AI Methodology & Grounding: ai/ai-methodology.md
   - Developer Guide:
       - Quickstart & Environment: developer/quickstart.md
+  - Reports & Validation:
+      - Architecture Audit: reports/ZUHURA_ARCHITECTURE_AUDIT.md
+      - Scientific Validation: reports/ZUHURA_SCIENTIFIC_VALIDATION_REPORT.md
+      - Security Audit: reports/ZUHURA_SECURITY_AUDIT.md
+      - Technical Debt Register: reports/ZUHURA_TECHNICAL_DEBT_REGISTER.md
+      - Upgrade Roadmap: reports/ZUHURA_UPGRADE_ROADMAP.md
+      - Execution Report: reports/ZUHURA_MARS_AUTONOMOUS_EXECUTION_REPORT.md
