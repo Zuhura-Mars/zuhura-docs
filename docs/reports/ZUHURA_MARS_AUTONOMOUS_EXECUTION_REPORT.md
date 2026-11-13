@@ -408,7 +408,7 @@ The imagery pipeline delivers dynamic resolution scaling across 3 orders of magn
 - [x] Dynamic Level-of-Detail ground resolution badge active in header.
 - [x] AI Scientist tool registry expanded with 5 deterministic scientific tools.
 - [x] Backend tests: 89 passed, 0 failed.
-- [x] Frontend tests: 17 passed, 0 failed.
+- [x] Frontend tests: 19 passed, 0 failed.
 - [x] Data tests: 33 passed, 0 failed.
 - [x] Frontend production build (`tsc && vite build`) clean with 0 errors.
 - [x] All 7 git repositories pushed to `https://github.com/Zuhura-Mars` without `--force`.
@@ -416,7 +416,52 @@ The imagery pipeline delivers dynamic resolution scaling across 3 orders of magn
 
 ---
 
-## 25. Certification of Non-Destructive Development
+## 25. Advanced Feature Refinements (Interactive Pinpoint, Dynamic Hover, 3D X-Ray, High-DPI Clarity)
+
+In response to deep operational requirements, four core subsystems were elevated:
+
+### 25.1 High-DPI Resolution & Surface Clarity (Without Additional Datasets)
+- **Problem**: Default Cesium canvas defaulted to a 1:1 CSS pixel ratio, resulting in blurry, sub-sampled rendering on Retina and 4K displays; furthermore, default ground atmospheric fog washed out surface relief.
+- **Solution**:
+  - `viewer.resolutionScale = Math.min(window.devicePixelRatio || 1.0, 2.0)` eliminates pixelation on high-DPI displays.
+  - `globe.maximumScreenSpaceError = 0.8` (down from 1.33) forces immediate loading of highest-detail mipmap levels.
+  - `scene.msaaSamples = 4` enables multi-sample anti-aliasing for razor-sharp crater rims and ridge lines.
+  - `globe.showGroundAtmosphere = false` removes atmospheric wash, revealing pristine surface contrast.
+  - Linear mipmap texture filtering (`LINEAR_MIPMAP_LINEAR`) applied across Viking (232m), CTX (5.55m), and HiRISE (0.50m) tile pyramids.
+
+### 25.2 Dynamic Real-Time Hover Intelligence Engine
+- **Problem**: Mouse hover needed to immediately display an informative description of the exact Martian landmark or region and continuously change as the cursor moves across different craters, volcanoes, and plains.
+- **Solution**:
+  - Embedded 78 official IAU nomenclature landmarks and 18 regional provinces client-side in `zuhura-frontend/src/lib/hoverData.ts`.
+  - Implemented zero-latency synchronous lookup `getHoverPlaceDescription(lat, lon, elev)` paired with debounced asynchronous backend enrichment (`zuhura-backend/src/zuhura/api/v1/hover.py`).
+  - Cursor movement dynamically switches between crater descriptions (e.g. Gale, Jezero, Korolev), volcanic calderas (Olympus Mons, Ascraeus Mons), canyon systems (Valles Marineris), and regional geological units (Elysium Planitia, Tharsis Rise).
+
+### 25.3 Interactive Pinpoint Departure & Arrival Navigation
+- **Problem**: Direct click-to-pinpoint navigation was needed where clicking on the 3D globe allows the user to pinpoint a departure location (Start) and an arrival destination (Target), then immediately draw and calculate the optimal traverse route across the terrain.
+- **Solution**:
+  - State machine in `zuhura-frontend/src/store/globeStore.ts`: `select_departure` $\rightarrow$ `select_arrival` $\rightarrow$ `routing` $\rightarrow$ `route_ready`.
+  - Interactive Cesium left-click raycasting picks terrain coordinates:
+    - **Click 1**: Drops animated emerald Departure Pin with elevation readout.
+    - **Click 2**: Drops glowing ruby Arrival Pin, calculates route using A* traversal or client-side great-circle slerp with MOLA elevation sampling, and renders glowing 3D polyline corridor on terrain.
+  - `PinpointRouteHUD.tsx` floating HUD displays travel sols, distance (km), vertical climb (m), rover vehicle profiles, and GeoJSON export.
+  - "Photo Match" preserved as a dedicated tool for Martian landscape photo localization.
+
+### 25.4 True 3D Navigable X-Ray Mars Interior Model
+- **Problem**: X-Ray Mars interior needed to be a fully interactive, exact 3D planetary model that users can navigate (rotate, zoom, pan, orbit) just like the real globe.
+- **Solution**:
+  - Built `zuhura-frontend/src/components/XRayMars3DModal.tsx` using Three.js and `OrbitControls`.
+  - Full 3D camera navigation: left-click orbit drag, middle-click pan, scroll wheel smooth zoom from planetary orbit down to the metallic core.
+  - Concentric 3D cutaway shells based on published NASA InSight seismic data:
+    - Crust (0–45 km) with procedural crater relief and polar ice caps.
+    - Lithospheric Mantle (45–500 km, olivine/pyroxene).
+    - Lower Mantle (500–1,570 km, bridgmanite/ringwoodite).
+    - Basal Molten Silicate Slag Layer (1,570–1,720 km, Samuel et al. *Nature* 2023).
+    - Liquid Fe-Ni-S Core ($R = 1,570\text{ km}$, Stähler et al. *Science* 2021).
+  - Dynamic cutaway angle slider ($0^\circ - 180^\circ$), exploded layer separation slider, interactive 3D raycast layer inspection with telemetry HUD, and animated seismic wave ray paths (P & S waves).
+
+---
+
+## 26. Certification of Non-Destructive Development
 
 **OFFICIAL CERTIFICATION:**
 
