@@ -1,0 +1,1493 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Scientific intelligence platform and 3D digital representation of Mars">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>ZUHURA — STAGE 8: SCIENTIFIC TERRAIN INTELLIGENCE - Zuhura Mars Digital Twin Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zuhura-stage-8-scientific-terrain-intelligence" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zuhura Mars Digital Twin Documentation" class="md-header__button md-logo" aria-label="Zuhura Mars Digital Twin Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zuhura Mars Digital Twin Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ZUHURA — STAGE 8: SCIENTIFIC TERRAIN INTELLIGENCE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architecture/system-overview/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../geodesy/mars-coordinate-systems/" class="md-tabs__link">
+          
+  
+  
+  Planetary Geodesy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../features/advanced-features/" class="md-tabs__link">
+          
+  
+  
+  Advanced Capabilities
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data/data-catalog-guide/" class="md-tabs__link">
+          
+  
+  
+  Scientific Data
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ai/ai-methodology/" class="md-tabs__link">
+          
+  
+  
+  AI & Intelligence
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/quickstart/" class="md-tabs__link">
+          
+  
+  
+  Developer Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reports/ZUHURA_ARCHITECTURE_AUDIT/" class="md-tabs__link">
+          
+  
+  
+  Reports & Validation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zuhura Mars Digital Twin Documentation" class="md-nav__button md-logo" aria-label="Zuhura Mars Digital Twin Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zuhura Mars Digital Twin Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/system-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planetary Geodesy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Planetary Geodesy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geodesy/mars-coordinate-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mars Coordinate Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Capabilities
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced Capabilities
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/advanced-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exploration & Intelligence Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scientific Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scientific Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/data-catalog-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Catalog Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI & Intelligence
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI & Intelligence
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/ai-methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Methodology & Grounding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart & Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Validation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reports & Validation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ZUHURA_ARCHITECTURE_AUDIT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ZUHURA_SCIENTIFIC_VALIDATION_REPORT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scientific Validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ZUHURA_SECURITY_AUDIT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ZUHURA_TECHNICAL_DEBT_REGISTER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Debt Register
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ZUHURA_UPGRADE_ROADMAP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrade Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/ZUHURA_MARS_AUTONOMOUS_EXECUTION_REPORT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Execution Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="zuhura-stage-8-scientific-terrain-intelligence">ZUHURA — STAGE 8: SCIENTIFIC TERRAIN INTELLIGENCE</h1>
+<h1 id="architecture-and-system-design-document">Architecture and System Design Document</h1>
+<p><strong>Document Version:</strong> 1.0.0<br />
+<strong>Phase:</strong> Stage 8 Phase 1 (Architecture, Feasibility &amp; Implementation Plan)<br />
+<strong>Status:</strong> PROPOSED / PENDING APPROVAL<br />
+<strong>Target Platform:</strong> Zuhura Integrated Planetary Digital Twin<br />
+<strong>Geodetic Reference:</strong> IAU/IAG 2015 Mars Biaxial Ellipsoid ($A = 3,396,190\text{ m}$, $C = 3,376,200\text{ m}$)<br />
+<strong>Vertical Datum:</strong> Mars Areoid (MOLA GMM-3 / MEG128 equipotential reference surface)  </p>
+<hr />
+<h2 id="1-executive-overview-scope">1. Executive Overview &amp; Scope</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>Stage 8 elevates the Zuhura Mars Digital Twin from a high-fidelity <strong>terrain visualization platform</strong> (completed in Stage 7) to an <strong>active scientific terrain intelligence system</strong>. The objective is to provide planetary scientists, mission planners, and rover operations engineers with rigorous, quantitative, and reproducible morphometric analysis tools directly integrated into the digital twin.</p>
+<h3 id="12-core-capabilities">1.2 Core Capabilities</h3>
+<ol>
+<li><strong>Point Terrain Intelligence:</strong> Instantaneous derivation of elevation, slope (degrees), aspect (compass orientation $0^\circ - 360^\circ$), curvature, and roughness indices at any user-selected Martian coordinate.</li>
+<li><strong>Latitude-Scaled Derivative Engine:</strong> Geodetically rigorous finite-difference gradient calculations accounting for map-projection metric scale distortions on the Martian biaxial ellipsoid.</li>
+<li><strong>Geodesic Transect Profiling:</strong> Extraction of continuous elevation cross-sections along great-circle arcs or multi-segment polylines with cumulative geodesic distance, slope along transect, and hypsometric relief metrics.</li>
+<li><strong>Local Morphometric Kernel Analysis:</strong> Window-based focal statistics (kernel sizes $3\times 3$, $5\times 5$, $7\times 7$) computing Terrain Roughness Index (TRI), Topographic Position Index (TPI), standard deviation ($\sigma_z$), and local relief.</li>
+<li><strong>Spatial Terrain Comparison:</strong> Comparative morphometry between two arbitrary Martian sites, evaluating elevation delta, path gradient, distance, and morphometric divergence.</li>
+<li><strong>Scientific Provenance &amp; Uncertainty Reporting:</strong> Every query response includes source dataset ID, nominal and metric ground resolution, vertical datum, processing method, and defensible uncertainty bounds.</li>
+</ol>
+<h3 id="13-non-disruption-guarantee">1.3 Non-Disruption Guarantee</h3>
+<p>All Stage 8 capabilities are designed as modular extensions built strictly upon the existing verified infrastructure:
+- <strong><code>zuhura-backend</code></strong>: Extends existing FastAPI services without modifying existing endpoints (<code>/api/v1/elevation</code>, <code>/api/v1/tiles/*</code>, <code>/api/v1/rasters/*</code>).
+- <strong><code>zuhura-data</code></strong>: Reuses <code>ZuhuraScienceAccess</code> zero-copy COG window reading and catalog architecture without modifying existing processed rasters or Quantized-Mesh tiles.
+- <strong><code>zuhura-frontend</code></strong>: Enhances <code>MarsGlobe.tsx</code>, <code>FeatureInspector.tsx</code>, and <code>LayerPanel.tsx</code> through non-breaking additive React components and state stores.</p>
+<hr />
+<h2 id="2-system-architecture-data-flow">2. System Architecture &amp; Data Flow</h2>
+<h3 id="21-layered-architecture-overview">2.1 Layered Architecture Overview</h3>
+<p>The system architecture cleanly separates user interaction, API routing, mathematical computation, raster data extraction, and physical storage:</p>
+<pre><code class="language-mermaid">flowchart TD
+    subgraph Frontend[&quot;Zuhura Frontend (React 18 / CesiumJS)&quot;]
+        UI_Globe[&quot;MarsGlobe.tsx\n(3D Interaction &amp; Pick)&quot;]
+        UI_Inspector[&quot;FeatureInspector.tsx\n(Point Morphometry Card)&quot;]
+        UI_Panel[&quot;LayerPanel.tsx\n(Terrain Tools Toggle)&quot;]
+        UI_Profile[&quot;TransectProfileDrawer.tsx\n(Elevation Cross-Section Chart)&quot;]
+        Store_Globe[&quot;globeStore.ts / terrainStore.ts\n(Analysis State Management)&quot;]
+    end
+
+    subgraph BackendAPI[&quot;Zuhura Backend Gateway (FastAPI / Uvicorn)&quot;]
+        Router_TI[&quot;/api/v1/spatial/terrain/*\n(Terrain Intelligence Router)&quot;]
+        Router_Elev[&quot;/api/v1/elevation\n(Existing Single-Point Endpoint)&quot;]
+        Deps[&quot;deps.py\n(get_science_access dependency)&quot;]
+    end
+
+    subgraph ComputationEngine[&quot;Terrain Intelligence Computation Core&quot;]
+        Engine_Deriv[&quot;derivative_engine.py\n(Horn 3x3 Slope &amp; Aspect with Metric Scaling)&quot;]
+        Engine_Profile[&quot;profile_engine.py\n(Geodesic Slerp &amp; Bilinear Raster Sampling)&quot;]
+        Engine_Kernel[&quot;morphometry_engine.py\n(TRI, TPI, Relief, Roughness Kernels)&quot;]
+        Engine_Geodesy[&quot;geodesy/transformations.py\n(IAU 2015 Ellipsoid &amp; Metric Tensor)&quot;]
+    end
+
+    subgraph DataAccess[&quot;Zuhura Data Access Layer (zuhura-data)&quot;]
+        Client_Sci[&quot;ZuhuraScienceAccess\n(access/client.py)&quot;]
+        Window_Reader[&quot;Zero-Copy COG Window Reader\n(GDAL ReadAsArray)&quot;]
+        Memory_Cache[&quot;Raster Window LRU Cache\n(In-Memory Tile Slices)&quot;]
+    end
+
+    subgraph Storage[&quot;Planetary Data Repositories&quot;]
+        COG_Global[&quot;MOLA MEG128 COG v3\n(463 m/px, Simple Cylindrical, 961 MB)&quot;]
+        DEM_Polar[&quot;MOLA Polar DEMs v2\n(460 m/px, Polar Stereographic, North/South)&quot;]
+        DEM_Regional[&quot;Regional DEM Subsets\n(Jezero, Gale, Valles Marineris, Olympus Mons)&quot;]
+        Mesh_Tiles[&quot;Quantized-Mesh 1.0 Pyramids\n(Levels 0-9 with Oct-Normals)&quot;]
+    end
+
+    UI_Globe --&gt;|Click Coordinate / Polyline| Store_Globe
+    Store_Globe --&gt;|Async Fetch| Router_TI
+    Router_TI --&gt; Deps
+    Deps --&gt; Client_Sci
+    Router_TI --&gt; Engine_Deriv
+    Router_TI --&gt; Engine_Profile
+    Router_TI --&gt; Engine_Kernel
+    Engine_Deriv --&gt; Engine_Geodesy
+    Engine_Profile --&gt; Engine_Geodesy
+    Engine_Deriv --&gt; Client_Sci
+    Engine_Profile --&gt; Client_Sci
+    Engine_Kernel --&gt; Client_Sci
+    Client_Sci --&gt; Memory_Cache
+    Memory_Cache --&gt; Window_Reader
+    Window_Reader --&gt; COG_Global
+    Window_Reader --&gt; DEM_Polar
+    Window_Reader --&gt; DEM_Regional
+
+    Router_TI --&gt;|JSON Response| Store_Globe
+    Store_Globe --&gt; UI_Inspector
+    Store_Globe --&gt; UI_Profile
+    Store_Globe --&gt; UI_Globe
+</code></pre>
+<hr />
+<h2 id="3-geodetic-mathematical-foundation">3. Geodetic &amp; Mathematical Foundation</h2>
+<h3 id="31-mars-ellipsoid-coordinate-standards">3.1 Mars Ellipsoid &amp; Coordinate Standards</h3>
+<p>Planetary coordinate handling adheres strictly to the IAU/IAG Working Group on Cartographic Coordinates and Rotational Elements (WGCCRE 2015):
+- <strong>Equatorial Semi-Major Radius ($A$):</strong> $3,396,190.0\text{ m}$
+- <strong>Polar Semi-Minor Radius ($C$):</strong> $3,376,200.0\text{ m}$
+- <strong>Flattening ($f$):</strong> $f = \frac{A - C}{A} = \frac{19,990.0}{3,396,190.0} \approx 0.0058860075$ ($1/f \approx 169.81$)
+- <strong>First Eccentricity Squared ($e^2$):</strong> $e^2 = \frac{A^2 - C^2}{A^2} \approx 0.01173335$
+- <strong>Mean Volumetric Radius ($R_{\text{mean}}$):</strong> $3,389,500.0\text{ m}$
+- <strong>Latitude Convention:</strong> Planetocentric latitude ($\phi \in [-90^\circ, +90^\circ]$), measured from the equatorial plane to the center of mass.
+- <strong>Longitude Convention:</strong> East-positive longitude ($\lambda \in [0^\circ, 360^\circ)$), with $0^\circ\text{E}$ fixed at the center of crater Airy-0.</p>
+<h3 id="32-the-map-projection-metric-tensor-finite-difference-scaling">3.2 The Map Projection Metric Tensor &amp; Finite-Difference Scaling</h3>
+<p>The global MOLA DEM (<code>mola_global_meg128_cog.tif</code>) is formatted in an Equidistant Cylindrical (Simple Cylindrical) projection with standard parallel at $0^\circ$ and central meridian at $180^\circ\text{E}$ on a sphere of radius $R = 3,396,000\text{ m}$.</p>
+<p>In this projection:
+$$x = R (\lambda - \lambda_0) \frac{\pi}{180}, \quad y = R \phi \frac{\pi}{180}$$
+The grid spacing at the equator is:
+$$\Delta x_0 = \Delta y_0 = \frac{2\pi R}{360 \times 128} \approx 463.0577\text{ m}$$</p>
+<h4 id="the-crucial-latitudinal-distortion-problem">The Crucial Latitudinal Distortion Problem</h4>
+<p>While the north-south grid distance $\Delta y$ remains constant across all latitudes:
+$$\Delta y(\phi) \equiv \Delta y_0 \approx 463.0577\text{ m}$$
+the physical east-west ground distance $\Delta x$ along a parallel of latitude $\phi$ contracts with the cosine of latitude:
+$$\Delta x(\phi) = R \cos(\phi) \Delta \lambda = \Delta x_0 \cos(\phi)$$</p>
+<p>If uncorrected, an algorithm that assumes isotropic pixel dimensions ($\Delta x = \Delta y = 463.06\text{ m}$) will compute:
+$$\left(\frac{\partial z}{\partial x}\right)<em>{\text{uncorrected}} = \cos(\phi) \cdot \left(\frac{\partial z}{\partial x}\right)</em>{\text{true}}$$
+This introduces catastrophic errors at mid and high latitudes:
+- At $\phi = 0^\circ$ (Equator): $\cos(\phi) = 1.000$ (0% error).
+- At $\phi = 18.38^\circ$ (Jezero Crater): $\cos(\phi) = 0.949$ (5.4% error in zonal gradient).
+- At $\phi = 45^\circ$ (Mid-latitudes): $\cos(\phi) = 0.707$ (41.4% error in zonal gradient).
+- At $\phi = 72.77^\circ$ (Korolev Crater): $\cos(\phi) = 0.296$ (238% error in zonal gradient).
+- At $\phi = 85^\circ$ (Polar fringe): $\cos(\phi) = 0.087$ (1,049% error in zonal gradient).</p>
+<h4 id="scientifically-rigorous-gradient-formulation">Scientifically Rigorous Gradient Formulation</h4>
+<p>To eliminate projection distortion, Zuhura implements the <strong>Metric Latitude-Scaled Horn (1981)</strong> $3\times 3$ finite-difference operator. Given a $3\times 3$ elevation neighborhood centered at $(\phi_0, \lambda_0)$:</p>
+<p>$$\begin{bmatrix} z_{tl} &amp; z_{t} &amp; z_{tr} \ z_{l} &amp; z_{0} &amp; z_{r} \ z_{bl} &amp; z_{b} &amp; z_{br} \end{bmatrix}$$</p>
+<ol>
+<li>
+<p>Evaluate the local metric ground cell dimensions at latitude $\phi_0$:
+   $$\Delta x(\phi_0) = \Delta x_0 \cdot \cos(\phi_0)$$
+   $$\Delta y(\phi_0) = \Delta y_0 = 463.0576672\text{ m}$$</p>
+</li>
+<li>
+<p>Compute weighted partial derivatives:
+   $$\frac{\partial z}{\partial x} = \frac{(z_{tr} + 2 z_r + z_{br}) - (z_{tl} + 2 z_l + z_{bl})}{8 \cdot \Delta x(\phi_0)}$$
+   $$\frac{\partial z}{\partial y} = \frac{(z_{tl} + 2 z_t + z_{tr}) - (z_{bl} + 2 z_b + z_{br})}{8 \cdot \Delta y(\phi_0)}$$</p>
+</li>
+<li>
+<p>Compute Surface Slope ($S$):
+   $$S_{\text{rad}} = \arctan\left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2}\right)$$
+   $$S_{\text{deg}} = S_{\text{rad}} \times \frac{180}{\pi}, \quad S_{\text{deg}} \in [0^\circ, 90^\circ]$$</p>
+</li>
+<li>
+<p>Compute Surface Aspect ($A$):
+   Following international cartographic and planetary science standards ($0^\circ = \text{North}$, $90^\circ = \text{East}$, $180^\circ = \text{South}$, $270^\circ = \text{West}$):
+   $$\theta = \operatorname{atan2}\left(\frac{\partial z}{\partial x}, -\frac{\partial z}{\partial y}\right)$$
+   $$A_{\text{deg}} = (\theta \times \frac{180}{\pi}) \pmod{360}$$
+   If $S_{\text{deg}} &lt; 0.01^\circ$ (effectively flat terrain), $A_{\text{deg}}$ is classified as <code>null</code> with cardinal orientation <code>"flat"</code>.</p>
+</li>
+</ol>
+<hr />
+<h2 id="4-transect-profiling-geodesic-interpolation-engine">4. Transect Profiling &amp; Geodesic Interpolation Engine</h2>
+<h3 id="41-great-circle-geodesic-arc-interpolation">4.1 Great-Circle Geodesic Arc Interpolation</h3>
+<p>For any two surface points $P_1(\phi_1, \lambda_1)$ and $P_2(\phi_2, \lambda_2)$, the transect path must follow the true planetary geodesic rather than a straight line in projected coordinates (which would introduce severe loxodromic distortion).</p>
+<ol>
+<li><strong>Angular Arc Distance ($\sigma$):</strong>
+   $$\sigma = \arccos\left(\sin\phi_1 \sin\phi_2 + \cos\phi_1 \cos\phi_2 \cos(\lambda_2 - \lambda_1)\right)$$</li>
+<li><strong>Total Geodesic Surface Distance ($D$):</strong>
+   $$D = R_{\text{mean}} \cdot \sigma = 3389500.0 \cdot \sigma \text{ (meters)}$$</li>
+<li><strong>Spherical Linear Interpolation (Slerp):</strong>
+   For $N$ sample steps with fractional distance $f = i / (N - 1)$ where $i \in [0, N-1]$:
+   Convert $P_1, P_2$ to unit Cartesian vectors $\mathbf{v}_1, \mathbf{v}_2$:
+   $$\mathbf{v}(f) = \frac{\sin((1 - f)\sigma)}{\sin\sigma} \mathbf{v}_1 + \frac{\sin(f\sigma)}{\sin\sigma} \mathbf{v}_2$$
+   Convert $\mathbf{v}(f) = (x_f, y_f, z_f)$ back to planetocentric coordinates:
+   $$\phi_f = \arcsin(z_f), \quad \lambda_f = \operatorname{atan2}(y_f, x_f) \pmod{360}$$</li>
+</ol>
+<h3 id="42-sub-pixel-bilinear-elevation-extraction">4.2 Sub-Pixel Bilinear Elevation Extraction</h3>
+<p>Rather than crude nearest-neighbor rounding, profile elevations are sampled via bilinear interpolation across the 4 nearest DEM grid cells to prevent artificial stepped artifacts in slope and profile profiles:</p>
+<p>$$z(\Delta u, \Delta v) = (1 - \Delta u)(1 - \Delta v) z_{00} + \Delta u (1 - \Delta v) z_{10} + (1 - \Delta u) \Delta v z_{01} + \Delta u \Delta v z_{11}$$</p>
+<h3 id="43-profile-morphometric-summary-statistics">4.3 Profile Morphometric Summary Statistics</h3>
+<p>For each transect, the engine computes:
+- Cumulative distance $d_i$ at each station $i$.
+- Segment gradient: $\alpha_i = \arctan\left(\frac{z_{i} - z_{i-1}}{d_i - d_{i-1}}\right)$.
+- Minimum elevation $z_{\min}$, Maximum elevation $z_{\max}$, Mean elevation $\bar{z}$.
+- Total topographic relief: $\Delta z_{\text{relief}} = z_{\max} - z_{\min}$.
+- Cumulative elevation gain: $\sum \max(0, z_{i} - z_{i-1})$.
+- Cumulative elevation loss: $\sum \max(0, z_{i-1} - z_{i})$.
+- Mean and peak slope along path.</p>
+<hr />
+<h2 id="5-local-morphometry-kernel-engine">5. Local Morphometry &amp; Kernel Engine</h2>
+<p>For point inspection and localized landing site characterization, the system supports focal kernel analysis across $3\times 3$, $5\times 5$, and $7\times 7$ windows:</p>
+<ol>
+<li><strong>Elevation Range / Local Relief ($\Delta z_k$):</strong>
+   $$\Delta z_k = \max(z_{i,j}) - \min(z_{i,j})$$</li>
+<li><strong>Elevation Standard Deviation ($\sigma_z$):</strong>
+   $$\sigma_z = \sqrt{\frac{1}{K} \sum_{k=1}^K (z_k - \bar{z})^2}$$</li>
+<li><strong>Terrain Roughness Index (TRI - Riley et al., 1999):</strong>
+   Evaluates local surface irregularity by computing the mean root-sum-square elevation difference between the center cell $z_0$ and all $K-1$ neighboring cells:
+   $$\text{TRI} = \sqrt{\frac{\sum_{k=1}^{K-1} (z_k - z_0)^2}{K - 1}}$$</li>
+<li><strong>Topographic Position Index (TPI - Weiss, 2001):</strong>
+   Identifies whether a cell sits on a ridge, flat plain, or depression:
+   $$\text{TPI} = z_0 - \bar{z}_{\text{neighbors}}$$</li>
+<li>$\text{TPI} &gt; +5\text{ m}$: Local ridge, scarp crest, or crater rim.</li>
+<li>$\text{TPI} \approx 0\text{ m}$: Flat plain, constant slope, or planar crater floor.</li>
+<li>$\text{TPI} &lt; -5\text{ m}$: Incised channel, pit crater, or canyon bottom.</li>
+</ol>
+<hr />
+<h2 id="6-frontend-integration-architecture">6. Frontend Integration Architecture</h2>
+<h3 id="61-marsglobetsx-integration">6.1 <code>MarsGlobe.tsx</code> Integration</h3>
+<ol>
+<li><strong>Interactive Terrain Picking:</strong> Uses Cesium's <code>ScreenSpaceEventHandler</code> on <code>LEFT_CLICK</code> when the Terrain Analysis mode is active.</li>
+<li><strong>Transect Drawing Tool:</strong></li>
+<li>Click start point $\rightarrow$ click end point (or drag line).</li>
+<li>Renders a dynamic Cesium <code>PolylineGraphics</code> draped over terrain using <code>clampToGround: true</code> with dashed contrasting outline.</li>
+<li>Emits coordinates to <code>terrainStore</code>.</li>
+</ol>
+<h3 id="62-featureinspectortsx-integration">6.2 <code>FeatureInspector.tsx</code> Integration</h3>
+<p>Expands the inspector dock with a new collapsible section:
+- <strong>Terrain Morphometry Card:</strong> Displays live Slope, Aspect, Local Roughness (TRI), TPI classification, and Ground Resolution alongside existing MOLA Areoid elevation.</p>
+<h3 id="63-transectprofiledrawertsx-new-component">6.3 <code>TransectProfileDrawer.tsx</code> (New Component)</h3>
+<p>A dockable bottom drawer that slides up when a transect is measured:
+- Renders a high-resolution interactive cross-section curve.
+- Hovering over any point on the chart displays distance, elevation, and slope, while driving an animated position pin on the 3D Mars globe.
+- Provides elevation gain/loss, max slope, and export buttons (JSON / CSV).</p>
+<h3 id="64-layerpaneltsx-integration">6.4 <code>LayerPanel.tsx</code> Integration</h3>
+<p>Adds a "Terrain Intelligence" toolbar containing:
+- Measure Distance &amp; Profile button.
+- Point Slope &amp; Aspect Inspector toggle.
+- Morphometric kernel radius selector.</p>
+<hr />
+<h2 id="7-performance-caching-strategy">7. Performance &amp; Caching Strategy</h2>
+<ol>
+<li><strong>Zero-Copy Window Extraction:</strong> The GDAL Python binding directly reads $3\times 3$ to $15\times 15$ pixel windows from the local MOLA COG v3 file via TIFF tile block access without memory allocation spikes.</li>
+<li><strong>LRU In-Memory Tile Cache:</strong> An in-memory cache of $512\times 512$ pixel tiles is maintained in the backend service. Repeated queries in the same region (e.g. Jezero crater floor) resolve in $&lt; 5\text{ ms}$ from cache.</li>
+<li><strong>Optimized Transect Extraction:</strong> 50-point profiles execute in $&lt; 25\text{ ms}$ by extracting bounding-box windows from the COG in a single batch read rather than 50 separate disk queries.</li>
+<li><strong>Bandwidth Efficiency:</strong> JSON payloads are lightweight ($&lt; 15\text{ KB}$ for a 200-sample transect), enabling 60 FPS UI interaction.</li>
+</ol>
+<hr />
+<h2 id="8-summary-of-architectural-impact">8. Summary of Architectural Impact</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Area</th>
+<th style="text-align: left;">Nature of Change</th>
+<th style="text-align: left;">Impact on Existing Code</th>
+<th style="text-align: center;">Regression Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>zuhura-backend</code></td>
+<td style="text-align: left;">Additive router <code>/api/v1/spatial/terrain/*</code> &amp; calculation modules</td>
+<td style="text-align: left;">None (all existing routes untouched)</td>
+<td style="text-align: center;"><strong>ZERO</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>zuhura-data</code></td>
+<td style="text-align: left;">Additive methods on <code>ZuhuraScienceAccess</code></td>
+<td style="text-align: left;">None (existing query methods preserved)</td>
+<td style="text-align: center;"><strong>ZERO</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>zuhura-frontend</code></td>
+<td style="text-align: left;">Additive profile chart drawer &amp; inspector extensions</td>
+<td style="text-align: left;">None (existing globe view &amp; layers preserved)</td>
+<td style="text-align: center;"><strong>ZERO</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Scientific Datasets</td>
+<td style="text-align: left;">Read-only consumption of validated MOLA COG &amp; Polar DEMs</td>
+<td style="text-align: left;">None (no files written or overwritten)</td>
+<td style="text-align: center;"><strong>ZERO</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1850 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Scientific intelligence platform and 3D digital representation of Mars">
+      
+      
+      
+      
+        <link rel="prev" href="../../developer/quickstart/">
+      
+      
+        <link rel="next" href="../ZUHURA_SCIENTIFIC_VALIDATION_REPORT/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Architecture Audit - Zuhura Mars Digital Twin Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zuhura-mars-complete-seven-repository-architecture-audit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zuhura Mars Digital Twin Documentation" class="md-header__button md-logo" aria-label="Zuhura Mars Digital Twin Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zuhura Mars Digital Twin Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture Audit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architecture/system-overview/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../geodesy/mars-coordinate-systems/" class="md-tabs__link">
+          
+  
+  
+  Planetary Geodesy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../features/advanced-features/" class="md-tabs__link">
+          
+  
+  
+  Advanced Capabilities
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data/data-catalog-guide/" class="md-tabs__link">
+          
+  
+  
+  Scientific Data
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ai/ai-methodology/" class="md-tabs__link">
+          
+  
+  
+  AI & Intelligence
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developer/quickstart/" class="md-tabs__link">
+          
+  
+  
+  Developer Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Reports & Validation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zuhura Mars Digital Twin Documentation" class="md-nav__button md-logo" aria-label="Zuhura Mars Digital Twin Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zuhura Mars Digital Twin Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/system-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planetary Geodesy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Planetary Geodesy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geodesy/mars-coordinate-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mars Coordinate Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Capabilities
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced Capabilities
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/advanced-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exploration & Intelligence Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scientific Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scientific Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/data-catalog-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Catalog Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI & Intelligence
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI & Intelligence
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/ai-methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Methodology & Grounding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart & Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Validation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reports & Validation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Audit
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-executive-summary-audit-mandate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Executive Summary &amp; Audit Mandate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-multi-repository-topology-and-system-interconnections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Multi-Repository Topology and System Interconnections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-detailed-repository-audits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Detailed Repository Audits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Detailed Repository Audits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-repository-zuhura-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Repository: zuhura-backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-repository-zuhura-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Repository: zuhura-frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-repository-zuhura-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Repository: zuhura-data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-repository-zuhura-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Repository: zuhura-api
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-repository-zuhura-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Repository: zuhura-docs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-repository-zuhura-root-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Repository: zuhura (Root Orchestration)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-repository-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Repository: .github
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-architectural-cohesion-inter-service-contract-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Architectural Cohesion &amp; Inter-Service Contract Audit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-architectural-quality-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Architectural Quality Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZUHURA_SCIENTIFIC_VALIDATION_REPORT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scientific Validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZUHURA_SECURITY_AUDIT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZUHURA_TECHNICAL_DEBT_REGISTER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Debt Register
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZUHURA_UPGRADE_ROADMAP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrade Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZUHURA_MARS_AUTONOMOUS_EXECUTION_REPORT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Execution Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-executive-summary-audit-mandate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Executive Summary &amp; Audit Mandate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-multi-repository-topology-and-system-interconnections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Multi-Repository Topology and System Interconnections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-detailed-repository-audits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Detailed Repository Audits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Detailed Repository Audits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-repository-zuhura-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Repository: zuhura-backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-repository-zuhura-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Repository: zuhura-frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-repository-zuhura-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Repository: zuhura-data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-repository-zuhura-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Repository: zuhura-api
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-repository-zuhura-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Repository: zuhura-docs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-repository-zuhura-root-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Repository: zuhura (Root Orchestration)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-repository-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Repository: .github
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-architectural-cohesion-inter-service-contract-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Architectural Cohesion &amp; Inter-Service Contract Audit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-architectural-quality-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Architectural Quality Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="zuhura-mars-complete-seven-repository-architecture-audit">ZUHURA MARS — COMPLETE SEVEN-REPOSITORY ARCHITECTURE AUDIT</h1>
+<p><strong>Document Identifier</strong>: <code>ZUHURA_AUDIT_ARCH_2026_V1</code><br />
+<strong>Execution Date</strong>: 2026-11-13<br />
+<strong>Status</strong>: APPROVED &amp; ACTIVE<br />
+<strong>Authors</strong>: Principal Software Architect, Senior Planetary Scientist, Lead Systems Engineer<br />
+<strong>Scope</strong>: All 7 Organization Repositories (<code>https://github.com/Zuhura-Mars</code>)</p>
+<hr />
+<h2 id="1-executive-summary-audit-mandate">1. Executive Summary &amp; Audit Mandate</h2>
+<p>The <strong>Zuhura Mars Digital Twin and Scientific Intelligence Platform</strong> represents a federated, multi-tier planetary information system designed to support interactive geospatial visualization, deterministic scientific calculation, and AI-assisted planetary exploration. </p>
+<p>This audit assesses the structural integrity, component coupling, API contracts, deployment configurations, and automated test coverage across all seven repositories in the GitHub organization <code>https://github.com/Zuhura-Mars</code>:
+1. <code>zuhura-backend</code> (FastAPI, GDAL, PyProj, GeoTIFF/NetCDF raster engines, AI Scientist tool registry, InSight interior models, A* routing)
+2. <code>zuhura-frontend</code> (React 18, CesiumJS, Three.js WebGL, Zustand, Tailwind CSS, Vite)
+3. <code>zuhura-data</code> (Planetary Data System [PDS] ingestion pipelines, STAC catalog builders, MOLA correction, quantized-mesh terrain generation)
+4. <code>zuhura-api</code> (OpenAPI 3.1 specifications, JSON schemas, Mars STAC extensions)
+5. <code>zuhura-docs</code> (MkDocs Material technical documentation, scientific methodology specifications, architecture reports)
+6. <code>zuhura</code> (Root orchestration, Docker Compose environment, init-db SQL, system operational scripts)
+7. <code>.github</code> (Organization profile, unified GitHub Actions CI/CD workflows, issue templates)</p>
+<p>The audit was executed under the strict directive:
+$$\text{PRESERVE} \longrightarrow \text{AUDIT} \longrightarrow \text{VALIDATE} \longrightarrow \text{IMPROVE} \longrightarrow \text{EXTEND} \longrightarrow \text{INTEGRATE} \longrightarrow \text{TEST} \longrightarrow \text{DOCUMENT} \longrightarrow \text{DEPLOY}$$</p>
+<hr />
+<h2 id="2-multi-repository-topology-and-system-interconnections">2. Multi-Repository Topology and System Interconnections</h2>
+<pre><code>                      +---------------------------------------+
+                      |         zuhura-api (Contract)         |
+                      | - OpenAPI 3.1 (/openapi/zuhura-v1.yaml)|
+                      | - JSON Schemas (/schemas/*.json)      |
+                      | - STAC Extension (/stac/*.json)       |
+                      +---------------------------------------+
+                                     ^         ^
+                                     |         |
+                  API Specification  |         | Type Generation
+                                     v         v
++-------------------------------+       +------------------------------------+
+|         zuhura-data           |       |          zuhura-backend            |
+| - PDS/USGS Ingestion Pipelines| ----&gt; | - FastAPI (Port 8000)              |
+| - MOLA MEG128 &amp; CTX Processors| Data  | - Geodesy (IAU 2015 WGCCRE)        |
+| - STAC Catalog &amp; Asset Manager| Mount | - Terrain Intelligence (Horn 1981) |
+| - Quantized-Mesh Terrain Gen  |       | - InSight Geophysics Engine        |
++-------------------------------+       | - Mars AI Scientist Tools          |
+                                        +------------------------------------+
+                                                           ^
+                                                           | REST / STAC / Tiles
+                                                           v
+                                        +------------------------------------+
+                                        |          zuhura-frontend           |
+                                        | - React 18 + Vite (Port 3000)      |
+                                        | - CesiumJS (High-DPI 3D Globe)     |
+                                        | - Three.js (3D Mars Interior Model)|
+                                        | - Zustand Centralized State        |
+                                        +------------------------------------+
+                                                           ^
+                                                           |
+                      +------------------------------------+------------------+
+                      |                      zuhura (Root)                   |
+                      | - Docker Compose Orchestration                        |
+                      | - PostgreSQL / PostGIS Spatial Database               |
+                      | - Cloudflare Secure Edge Tunnel                       |
+                      +-------------------------------------------------------+
+</code></pre>
+<hr />
+<h2 id="3-detailed-repository-audits">3. Detailed Repository Audits</h2>
+<h3 id="31-repository-zuhura-backend">3.1 Repository: <code>zuhura-backend</code></h3>
+<ul>
+<li><strong>Primary Role</strong>: Scientific computation, spatial queries, terrain analysis, routing, visual localization, AI research orchestration.</li>
+<li><strong>Tech Stack</strong>: Python 3.12+, FastAPI, GDAL 3.8+, PyProj, NumPy, SciPy, Pydantic v2, Uvicorn.</li>
+<li><strong>Key Modules</strong>:</li>
+<li><code>zuhura.geodesy</code>: Implements IAU/IAG 2015 WGCCRE biaxial ellipsoid geodesy ($A = 3,396,190\text{ m}$, $C = 3,376,200\text{ m}$, $1/f = 169.81$). Rigorous coordinate transformations between planetocentric latitude/east-longitude and MCMF Cartesian coordinates.</li>
+<li><code>zuhura.terrain_intelligence</code>: Horn (1981) 8-neighbor quadratic surface fitting for metric slope gradients, aspect, and Terrain Ruggedness Index (TRI).</li>
+<li><code>zuhura.interior.model</code>: InSight SEIS geophysical model synthesizing crustal layers, mantle, basal molten silicate layer, and liquid core.</li>
+<li><code>zuhura.navigation.router</code>: A* cost-distance traverser over MOLA/DEM grids with vehicle mobility limits (Perseverance, Curiosity, Dune Buggy, Aerial Scout).</li>
+<li><code>zuhura.pinpoint.engine</code>: Morphological feature extraction and ground-truth landscape matching.</li>
+<li><code>zuhura.ai.tools</code>: 14 deterministic scientific tools exposed to the Mars AI Scientist.</li>
+<li><strong>Strengths</strong>: Strict Pydantic input schemas; mathematically sound geodetic projections; sub-millisecond LRU spatial caching; zero mock fallbacks for core geodesy.</li>
+<li><strong>Weaknesses &amp; Identified Issues</strong>:</li>
+<li><em>Scientific Provenance</em>: Lack of uniform epistemic classification tags (<code>OBSERVED</code>, <code>MEASURED</code>, <code>DERIVED</code>, <code>MODEL_ESTIMATED</code>, <code>SIMULATED</code>, <code>PROVISIONAL</code>, <code>UNVERIFIED</code>) on all endpoint outputs.</li>
+<li><em>Mobility Model Simplification</em>: Slope penalty currently models mechanical slip using simple trigonometric scaling without explicit wheel soil-mechanics (Bekker theory) or solar insolation dynamic cost.</li>
+<li><em>Interior Model Plurality</em>: The single default profile masks the published variance between the 2021 large-core model ($R=1,830\text{ km}$) and the 2023 basal molten silicate layer model ($R=1,650\text{ km}$).</li>
+<li><em>Observability</em>: Lacks OpenTelemetry tracing and Prometheus metrics endpoints.</li>
+</ul>
+<h3 id="32-repository-zuhura-frontend">3.2 Repository: <code>zuhura-frontend</code></h3>
+<ul>
+<li><strong>Primary Role</strong>: User interface, 3D planetary digital twin, interactive geospatial analysis, real-time telemetry display.</li>
+<li><strong>Tech Stack</strong>: React 18, TypeScript 5, Vite, CesiumJS 1.119+, Three.js r128+, Zustand, Tailwind CSS, Lucide React.</li>
+<li><strong>Key Components</strong>:</li>
+<li><code>MarsGlobe.tsx</code>: Cesium viewer configured with custom IAU 2015 Mars ellipsoid, Viking MDIM 2.1, MRO CTX, and MRO HiRISE tile layers. High-DPI canvas scaling (<code>devicePixelRatio</code>), MSAA anti-aliasing, and disabled ground atmospheric wash.</li>
+<li><code>XRayMars3DModal.tsx</code>: Interactive Three.js WebGL 3D model with OrbitControls, dynamic cutaway angle slider ($0^\circ-180^\circ$), exploded shell slider, interactive 3D raycast layer picking, and animated seismic wave paths.</li>
+<li><code>PinpointRouteHUD.tsx</code>: Interactive click-to-route HUD managing departure and arrival pins, distance, climb, travel sols, and GeoJSON export.</li>
+<li><code>HoverIntelligenceTooltip.tsx</code>: Real-time hover HUD with 0ms dynamic description switching across 78 IAU features and 18 regional provinces.</li>
+<li><strong>Strengths</strong>: High performance 60 fps rendering; decoupled state management in Zustand; crisp high-DPI surface presentation.</li>
+<li><strong>Weaknesses &amp; Identified Issues</strong>:</li>
+<li><em>Single Imagery Provider Fallback</em>: Local mock raster server must gracefully fallback to public NASA/USGS WMTS tiles when local tile servers are offline.</li>
+<li><em>Measurement Tools</em>: Missing dedicated interactive geodesic distance ruler and polygon area calculation tools on the globe.</li>
+<li><em>Session History</em>: Lacks client-side persistence for researcher bookmarks, annotations, and route history across page reloads.</li>
+</ul>
+<h3 id="33-repository-zuhura-data">3.3 Repository: <code>zuhura-data</code></h3>
+<ul>
+<li><strong>Primary Role</strong>: Ingestion, validation, correction, and tiling of planetary datasets.</li>
+<li><strong>Tech Stack</strong>: Python 3.12+, GDAL, Rasterio, NumPy, NetCDF4, PyYAML, Pydantic.</li>
+<li><strong>Key Modules</strong>:</li>
+<li><code>zuhura_data.spatial.alignment</code>: Alignment of MOLA MEG128, CTX, and HiRISE grids.</li>
+<li><code>zuhura_data.terrain.quantized_mesh</code>: Generation of quantized-mesh terrain tiles for Cesium.</li>
+<li><code>zuhura_data.catalog</code>: STAC item and collection metadata builder.</li>
+<li><strong>Strengths</strong>: Robust validation test suite (33 tests); strict check on NoData values and nodata masking.</li>
+<li><strong>Weaknesses &amp; Identified Issues</strong>:</li>
+<li><em>True Resolution Accounting</em>: Tile metadata does not always distinguish nominal camera ground sample distance (GSD) from effective spatial resolution degraded by atmospheric dust or compression.</li>
+<li><em>Data Checksums</em>: Checksums (SHA-256) are defined in manifests but not continuously validated during runtime ingestion.</li>
+</ul>
+<h3 id="34-repository-zuhura-api">3.4 Repository: <code>zuhura-api</code></h3>
+<ul>
+<li><strong>Primary Role</strong>: Canonical contract definitions for OpenAPI, JSON Schemas, and STAC extensions.</li>
+<li><strong>Tech Stack</strong>: OpenAPI 3.1.0, JSON Schema Draft 2020-12.</li>
+<li><strong>Key Assets</strong>:</li>
+<li><code>openapi/zuhura-v1.yaml</code>: Complete REST API contract definitions.</li>
+<li><code>schemas/</code>: Schemas for spatial queries, AI queries, datasets, and terrain analysis.</li>
+<li><code>stac/mars-stac-extension.json</code>: STAC extension specifying planetary coordinate systems, vertical areoid datum, and lighting conditions ($L_s$).</li>
+<li><strong>Strengths</strong>: Strict contract-first design; eliminates API drift between backend and frontend.</li>
+<li><strong>Weaknesses &amp; Identified Issues</strong>:</li>
+<li>Lacks automated schemathesis / tavern contract-compliance testing in CI pipeline to verify live endpoints against OpenAPI definitions.</li>
+</ul>
+<h3 id="35-repository-zuhura-docs">3.5 Repository: <code>zuhura-docs</code></h3>
+<ul>
+<li><strong>Primary Role</strong>: System architecture documentation, mathematical specifications, geodesy guidelines, operational reports.</li>
+<li><strong>Tech Stack</strong>: MkDocs Material, Markdown, Mermaid, MathJax.</li>
+<li><strong>Key Sections</strong>:</li>
+<li>Geodetic standards (IAU 2015 WGCCRE, MOLA areoid).</li>
+<li>AI methodology and epistemic grounding tags.</li>
+<li>Historical execution and baseline reports.</li>
+<li><strong>Strengths</strong>: Clear mathematical formulations and references to peer-reviewed literature.</li>
+<li><strong>Weaknesses &amp; Identified Issues</strong>:</li>
+<li>Needs real-time synchronization with newly developed endpoints, provenance schemas, and researcher workspace features.</li>
+</ul>
+<h3 id="36-repository-zuhura-root-orchestration">3.6 Repository: <code>zuhura</code> (Root Orchestration)</h3>
+<ul>
+<li><strong>Primary Role</strong>: System orchestration, container definitions, environment configuration, database bootstrapping.</li>
+<li><strong>Tech Stack</strong>: Docker Compose, PostgreSQL 16 + PostGIS, Cloudflare Tunnel (<code>cloudflared</code>).</li>
+<li><strong>Key Assets</strong>:</li>
+<li><code>docker/docker-compose.yml</code>: Multi-container service definitions.</li>
+<li><code>docker/init-db.sql</code>: Database schema initialization.</li>
+<li><strong>Strengths</strong>: Clean separation of microservices.</li>
+<li><strong>Weaknesses &amp; Identified Issues</strong>:</li>
+<li>Dockerfile configurations run as <code>root</code> in several build stages; should be hardened to non-privileged user.</li>
+<li>PostgreSQL lacks automated backup cron and volume backup verification.</li>
+</ul>
+<h3 id="37-repository-github">3.7 Repository: <code>.github</code></h3>
+<ul>
+<li><strong>Primary Role</strong>: Organization-wide governance, CI/CD pipeline, issue and pull request templates.</li>
+<li><strong>Tech Stack</strong>: GitHub Actions, YAML.</li>
+<li><strong>Key Workflows</strong>:</li>
+<li><code>ci.yml</code>: Unified CI running ruff, pytest (backend &amp; data), typecheck, vitest (frontend), and schema validation.</li>
+<li><strong>Strengths</strong>: Covers linting, testing, and schema validation in a single pipeline.</li>
+<li><strong>Weaknesses &amp; Identified Issues</strong>:</li>
+<li>Frontend step uses <code>npm run typecheck || true</code> allowing potential type errors to pass quietly.</li>
+<li>Missing container security vulnerability scanning (Trivy / Grype) and automated dependency auditing.</li>
+</ul>
+<hr />
+<h2 id="4-architectural-cohesion-inter-service-contract-audit">4. Architectural Cohesion &amp; Inter-Service Contract Audit</h2>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Producer</th>
+<th>Consumer</th>
+<th>Protocol / Format</th>
+<th>Integrity Status</th>
+<th>Corrective Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geodesy &amp; Terrain</td>
+<td><code>zuhura-backend</code></td>
+<td><code>zuhura-frontend</code></td>
+<td>REST / JSON</td>
+<td><strong>Verified</strong></td>
+<td>Maintain strict IAU 2015 ellipsoid constants</td>
+</tr>
+<tr>
+<td>InSight Interior Model</td>
+<td><code>zuhura-backend</code></td>
+<td><code>zuhura-frontend</code></td>
+<td>REST / JSON</td>
+<td><strong>Verified</strong></td>
+<td>Add multi-paper model selector (Samuel 2023 vs Stähler 2021)</td>
+</tr>
+<tr>
+<td>Terrain Tiles &amp; DEM</td>
+<td><code>zuhura-data</code></td>
+<td><code>zuhura-backend</code></td>
+<td>GDAL GeoTIFF / NetCDF</td>
+<td><strong>Verified</strong></td>
+<td>Enforce explicit NoData masking and COG tiling</td>
+</tr>
+<tr>
+<td>STAC Metadata</td>
+<td><code>zuhura-api</code></td>
+<td><code>zuhura-backend</code></td>
+<td>STAC JSON / OpenAPI</td>
+<td><strong>Verified</strong></td>
+<td>Extend with explicit provenance classification</td>
+</tr>
+<tr>
+<td>Pinpoint Navigation</td>
+<td><code>zuhura-frontend</code></td>
+<td>User / Cesium</td>
+<td>Zustand / Polyline</td>
+<td><strong>Verified</strong></td>
+<td>Add energy consumption and wheel slip estimation</td>
+</tr>
+<tr>
+<td>AI Tool Registry</td>
+<td><code>zuhura-backend</code></td>
+<td>Gemini API</td>
+<td>JSON-RPC Tool Calls</td>
+<td><strong>Verified</strong></td>
+<td>Expand with research decomposition &amp; paper retrieval</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-architectural-quality-matrix">5. Architectural Quality Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Current Score (1-10)</th>
+<th>Target</th>
+<th>Key Remediation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scientific Provability</strong></td>
+<td>7.5</td>
+<td>9.8</td>
+<td>Implement Centralized Scientific Truth Engine with provenance tags</td>
+</tr>
+<tr>
+<td><strong>Geodetic Accuracy</strong></td>
+<td>9.5</td>
+<td>10.0</td>
+<td>Maintain IAU 2015 WGCCRE datum across all endpoints</td>
+</tr>
+<tr>
+<td><strong>Terrain Navigation</strong></td>
+<td>7.8</td>
+<td>9.5</td>
+<td>Integrate Bekker soil-mechanics slip and solar energy constraints</td>
+</tr>
+<tr>
+<td><strong>Visual Localization</strong></td>
+<td>7.0</td>
+<td>9.2</td>
+<td>Add multi-scale ORB/CV pipeline and conclusive evidence scoring</td>
+</tr>
+<tr>
+<td><strong>Code Modularity</strong></td>
+<td>8.5</td>
+<td>9.5</td>
+<td>Decouple simulation modules with strict Pydantic interfaces</td>
+</tr>
+<tr>
+<td><strong>Test Coverage</strong></td>
+<td>8.2</td>
+<td>9.6</td>
+<td>Add contract testing, mobility unit tests, and researcher workspace tests</td>
+</tr>
+<tr>
+<td><strong>DevSecOps &amp; Hardening</strong></td>
+<td>7.2</td>
+<td>9.4</td>
+<td>Add non-root Docker execution, Prometheus metrics, and OpenTelemetry</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Certified autonomously by the Principal Software Architect and Systems Engineering Team.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
